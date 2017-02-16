@@ -60,9 +60,9 @@ else
 
 
     # xdebug Config
-    EXTENSION_DIR = $(php-config --extension-dir)
-    cat > $(find /etc/php/${PHP_VERSION} -name xdebug.ini) << EOF
-zend_extension=$(find ${EXTENSION_DIR} -name xdebug.so)
+    EXTENSION_DIR=$(php-config --extension-dir)
+    cat > $(find /etc/php/$PHP_VERSION -name xdebug.ini) << EOF
+zend_extension=$(find $EXTENSION_DIR -name xdebug.so)
 xdebug.remote_enable = 1
 xdebug.remote_connect_back = 1
 xdebug.remote_port = 9000
