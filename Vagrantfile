@@ -2,10 +2,9 @@
 # vi: set ft=ruby :
 
 # Config Github Settings
-github_username = "fideloper"
+github_username = "waynestate"
 github_repo     = "Vaprobash"
-github_branch   = "1.4.2"
-github_url      = "https://raw.githubusercontent.com/#{github_username}/#{github_repo}/#{github_branch}"
+github_branch   = "feature/ubuntu16.04"
 
 # Because this:https://developer.github.com/changes/2014-12-08-removing-authorizations-token/
 # https://github.com/settings/tokens
@@ -21,7 +20,7 @@ hostname        = "vaprobash.dev"
 #   10.0.0.1    - 10.255.255.254
 #   172.16.0.1  - 172.31.255.254
 #   192.168.0.1 - 192.168.255.254
-server_ip             = "192.168.22.10"
+server_ip             = "10.10.10.13"
 server_cpus           = "1"   # Cores
 server_memory         = "384" # MB
 server_swap           = "768" # Options: false | int (MB) - Guideline: Between one or two times the server_memory
@@ -113,8 +112,9 @@ Vagrant.configure("2") do |config|
   if Vagrant.has_plugin?("vagrant-auto_network")
     config.vm.network :private_network, :ip => "0.0.0.0", :auto_network => true
   else
-    config.vm.network :private_network, ip: server_ip
-    config.vm.network :forwarded_port, guest: 80, host: 8000
+      # Create a static IP
+      config.vm.network :private_network, ip: server_ip
+      config.vm.network :forwarded_port, guest: 80, host: 8080
   end
 
   # Enable agent forwarding over SSH connections
