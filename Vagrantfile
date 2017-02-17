@@ -5,6 +5,7 @@
 github_username = "waynestate"
 github_repo     = "Vaprobash"
 github_branch   = "feature/ubuntu16.04"
+github_url      = "https://raw.githubusercontent.com/#{github_username}/#{github_repo}/#{github_branch}"
 
 # Because this:https://developer.github.com/changes/2014-12-08-removing-authorizations-token/
 # https://github.com/settings/tokens
