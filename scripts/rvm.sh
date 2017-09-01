@@ -36,12 +36,12 @@ else
         echo ">>> Installing Ruby Version Manager and installing latest stable Ruby version"
 
         # Install RVM and install latest stable Ruby version
-        \curl -sSL https://get.rvm.io | grep -v __rvm_print_headline | bash -s stable --ruby
+        \curl -sSL https://raw.githubusercontent.com/wayneeseguin/rvm/stable/binscripts/rvm-installer | bash -s stable --ruby
     else
         echo ">>> Installing Ruby Version Manager and installing Ruby version: $1"
 
         # Install RVM and install selected Ruby version
-        \curl -sSL https://get.rvm.io | grep -v __rvm_print_headline | bash -s stable --ruby=$RUBY_VERSION
+        \curl -sSL https://raw.githubusercontent.com/wayneeseguin/rvm/stable/binscripts/rvm-installer | bash -s stable --ruby=$RUBY_VERSION
     fi
 
     # Re-source RVM
