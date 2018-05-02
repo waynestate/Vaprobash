@@ -35,7 +35,7 @@ ST=Connecticut
 O=Vaprobash
 localityName=New Haven
 commonName=$DOMAIN
-organizationalUnitName=
+organizationalUnitName=VaproBash
 emailAddress=
 "
 
