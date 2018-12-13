@@ -30,6 +30,7 @@ else
     # Import Michal Papis' key to be able to verify the installation
     echo ">>> Importing rvm public key"
     command curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+    command curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -
 
     # Install RVM and install Ruby
     if [[ $RUBY_VERSION =~ "latest" ]]; then
