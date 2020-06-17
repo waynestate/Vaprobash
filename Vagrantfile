@@ -4,7 +4,7 @@
 # Config Github Settings
 github_username = "waynestate"
 github_repo     = "Vaprobash"
-github_branch   = "feature/ubuntu16.04"
+github_branch   = "feature/ubuntu20.04"
 github_url      = "https://raw.githubusercontent.com/#{github_username}/#{github_repo}/#{github_branch}"
 
 # Because this:https://developer.github.com/changes/2014-12-08-removing-authorizations-token/
@@ -91,8 +91,8 @@ elasticsearch_version = "2.3.1" # 5.0.0-alpha1, 2.3.1, 2.2.2, 2.1.2, 1.7.5
 
 Vagrant.configure("2") do |config|
 
-  # Set server to Ubuntu 16.04
-  config.vm.box = "bento/ubuntu-16.04"
+  # Set server to Ubuntu 20.04
+  config.vm.box = "ubuntu/focal64"
 
   config.vm.define "Vaprobash" do |vapro|
   end
